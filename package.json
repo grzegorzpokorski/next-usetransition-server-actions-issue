@@ -3,7 +3,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix --quiet",
+    "format": "pnpm prettier . --write"
   },
   "dependencies": {
     "next": "canary",
@@ -13,6 +16,9 @@
   "devDependencies": {
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "13.5.3-canary.3",
+    "prettier": "^3.0.0",
     "typescript": "5.1.3"
   }
 }
