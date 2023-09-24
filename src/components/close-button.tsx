@@ -11,7 +11,7 @@ export const CloseButton = () => {
 
   return (
     <button className="bg-black text-white p-1" onClick={handleClick}>
-      close
+      close modal
     </button>
   );
 };

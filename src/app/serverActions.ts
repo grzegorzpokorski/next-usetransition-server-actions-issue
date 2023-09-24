@@ -3,11 +3,12 @@
 import { revalidatePath } from "next/cache";
 
 export const exampleServerAction = async () => {
-  const product = await fetch("https://dummyjson.com/products/1", {
+  const number = Math.floor(Math.random() * 50);
+  const product = await fetch(`https://dummyjson.com/products/${number}`, {
     cache: "no-store",
   });
 
   revalidatePath("/cart");
 
-  return product.headers;
+  return await product.json();
 };
