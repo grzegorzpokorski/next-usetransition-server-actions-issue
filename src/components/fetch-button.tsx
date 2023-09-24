@@ -23,7 +23,12 @@ export const FetchButton = () => {
       >
         <span>{isPending ? "fetching" : "fetch data"}</span>
       </button>
-      {data && <p>{data}</p>}
+      {data && (
+        <div className="flex flex-col">
+          <h2 className="font-bold">Fetched data:</h2>
+          <p>{data}</p>
+        </div>
+      )}
     </div>
   );
 };
